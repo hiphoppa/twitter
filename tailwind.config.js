@@ -37,6 +37,7 @@ module.exports = {
     extend: {
       animation: ['hover', 'group-hover'],
       blur: ['group-hover'],
+      brightness: ['hover'],
     },
   },
   plugins: [
