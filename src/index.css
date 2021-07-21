@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Fonts */
+@layer components {
+    /* IRANSansX ***/
+    @font-face {
+      font-family: IRANSansX;
+      font-style: normal;
+      font-weight: 700;
+      src: url('./css/fonts/woff/IRANSansX-Bold.woff') format('woff'),
+      url('./css/fonts/woff2/IRANSansX-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: IRANSansX;
+      font-style: normal;
+      font-weight: 500;
+      src: url('./css/fonts/woff/IRANSansX-Medium.woff') format('woff'),
+      url('./css/fonts/woff2/IRANSansX-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: IRANSansX;
+      font-style: normal;
+      font-weight: 400;
+      src: url('./css/fonts/woff/IRANSansX-Regular.woff') format('woff'),
+      url('./css/fonts/woff2/IRANSansX-Regular.woff2') format('woff2');
+    }
+
+}
+/* input */
+input[type=text]{
+  @apply text-base font-normal font-iran border border-gray-300 hover:border-gray-400 transition duration-300 focus:border-gray-300 focus:shadow-md focus:outline-none focus:ring-0 focus:ring-offset-0 placeholder-gray-400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button{
+    @apply focus:outline-none transition duration-300;
+}
+
+
+body{
+    @apply font-iran;
 }
