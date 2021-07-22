@@ -31,6 +31,11 @@ module.exports = {
       fontFamily: {
         'iran': 'IRANSansX, serif !important',
       },
+      fill: theme => ({
+        current: 'currentColor',
+        'red': theme('colors.red.400'),
+        'white': theme('colors.white'),
+      })
     },
   },
   variants: {
@@ -38,6 +43,7 @@ module.exports = {
       animation: ['hover', 'group-hover'],
       blur: ['group-hover'],
       brightness: ['hover'],
+      fill: ['group-hover'],
     },
   },
   plugins: [
