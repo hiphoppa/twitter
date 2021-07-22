@@ -31,11 +31,11 @@
 }
 /* input */
 input[type=text]{
-  @apply text-base font-normal font-iran border border-gray-300 hover:border-gray-400 transition duration-300 focus:border-gray-300 focus:shadow-md focus:outline-none focus:ring-0 focus:ring-offset-0 placeholder-gray-400;
+  @apply text-base font-normal placeholder-gray-400 transition duration-300 border border-gray-300 font-iran hover:border-gray-400 focus:border-gray-300 focus:shadow-md focus:outline-none focus:ring-0 focus:ring-offset-0;
 }
 
 button{
-    @apply focus:outline-none transition duration-300;
+    @apply transition duration-300 focus:outline-none;
 }
 
 
@@ -43,6 +43,11 @@ body{
     @apply font-iran;
 }
 
-::-webkit-resizer {
+/* ::-webkit-resizer {
     display: none;
+  } */
+
+  .editable:empty::before{
+    content: attr(data-placeholder);
+    @apply text-gray-400;
   }

@@ -2,6 +2,10 @@ import React from 'react';
 
 
 const Tweet = ({data}) => {
+
+    const handleHashtags = (text) => {
+        return {__html: text.replace(/#\S+/g, '<a href="/tags/$&" style="color: rgb(21, 142, 242)">$&</a>')}
+    }
     return (
         <div className="grid grid-cols-10 p-4 border-b border-gray-100">
             {/* img */}
@@ -22,9 +26,7 @@ const Tweet = ({data}) => {
                     </div>
                 </div>
                 {/* post text */}
-                <p className="block mb-8 text-base font-normal text-gray-700">
-                    {data.post}
-                </p>
+                <p dangerouslySetInnerHTML={handleHashtags(data.post)} className="block mb-8 text-base font-normal text-gray-700"></p>
                 {/* post options */}
                 <div className="flex items-center justify-around">
                     {/* comment */}

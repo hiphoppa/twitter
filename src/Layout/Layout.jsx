@@ -11,9 +11,9 @@ const Layout = () => {
     return (
         <div className="grid max-w-screen-xl grid-cols-12 gap-4 mx-auto">
             <LeftSide />
-            {/* <HomePage /> */}
+            <HomePage />
             {/* <HashtagTrend /> */}
-            <Profile />
+            {/* <Profile /> */}
             <RightSide />
         </div>
     );

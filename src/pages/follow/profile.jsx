@@ -77,7 +77,7 @@ const Profile = () => {
                     </div>
                 </div>
                 {/* following and followers */}
-                <div className="flex items-center gap-6 px-4">
+                <div className="flex items-center gap-6 px-4 mb-8">
                     {/* following */}
                     <div className="flex items-center gap-2">
                         <span className="block text-base font-bold text-gray-900"> 49 </span>
@@ -89,7 +89,13 @@ const Profile = () => {
                         <span className="block text-base font-normal text-gray-600"> followers </span>
                     </div>
                 </div>
-
+                {/* categories */}
+                <div className="flex items-center text-lg font-bold text-gray-600 border-b border-gray-100">
+                    <div className="flex justify-center flex-auto py-4 transition duration-300 cursor-pointer hover:bg-blue-50 hover:text-primary-400"> Tweets </div>
+                    <div className="flex justify-center flex-auto py-4 transition duration-300 cursor-pointer hover:bg-blue-50 hover:text-primary-400"> Tweets & replies </div>
+                    <div className="flex justify-center flex-auto py-4 transition duration-300 cursor-pointer hover:bg-blue-50 hover:text-primary-400"> Media </div>
+                    <div className="flex justify-center flex-auto py-4 transition duration-300 cursor-pointer hover:bg-blue-50 hover:text-primary-400"> Likes </div>
+                </div>
 
             </div>
 
