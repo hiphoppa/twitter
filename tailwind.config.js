@@ -12,7 +12,7 @@ module.exports = {
           // '80%': { transform: 'rotate(-3deg)' },
           // '100%': { transform: 'rotate(0deg)' },
           '0%, 100%': { transform: 'rotate(-3deg)' },
-           '50%': { transform: 'rotate(3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         }
       },
       blur: {
@@ -35,7 +35,15 @@ module.exports = {
         current: 'currentColor',
         'red': theme('colors.red.400'),
         'white': theme('colors.white'),
-      })
+      }),
+      height: {
+        29: '7.25rem',
+        30: '7.5rem',
+      },
+      width: {
+        '29': '7.25rem',
+        '30': '7.5rem',
+      },
     },
   },
   variants: {
@@ -48,5 +56,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 }
