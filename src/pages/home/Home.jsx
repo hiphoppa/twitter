@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import TextareaAutosize from 'react-textarea-autosize';
 import Header from './components/Header'
 import Tweets from './components/Tweets';
@@ -149,7 +150,7 @@ const HomePage = () => {
                 <div className="flex flex-col w-full gap-4 pt-2">
                     {/* <TextareaAutosize className="w-full text-xl font-medium text-gray-700 placeholder-gray-400 border-0 focus:border-0 focus:ring-0" placeholder="New Tweet..." /> */}
                     <div
-                        className="w-full text-xl font-medium text-gray-700 editable focus:outline-none"
+                        className="w-full text-xl font-medium text-gray-700 editable focus:outline-none cursor-text"
                         contentEditable
                         data-placeholder="New Tweet..."
                         ref={inptContent}
@@ -202,7 +203,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-2.5 bg-gray-100 border-t border-b border-gray-200"></div>
+            <Link to='/profile'>
+                <div className="w-full h-2.5 bg-gray-100 border-t border-b border-gray-200"></div>
+            </Link>
             {/* tweets */}
             <Tweets tweetList={TweetList} />
 

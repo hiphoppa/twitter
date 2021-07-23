@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const RightSide = () => {
@@ -124,24 +125,26 @@ const RightSide = () => {
                     </div>
                     {/* people */}
                     <div className="flex flex-col">
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                        <Link to='profile'>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="./img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Coder of the night </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @nightCoder </span>
+                                    </div>
                                 </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Coder of the night </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @nightCoder </span>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
                                 </div>
                             </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
-                            </div>
-                        </div>
+                        </Link>
                         <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
                             {/* image and info */}
                             <div className="flex items-center gap-2">
