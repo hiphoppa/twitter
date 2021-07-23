@@ -1,6 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const nightCoder={
+    name: 'night coder',
+    headerPhoto: '/img/night/night.jpg',
+    profile: '/img/night/profile.jpg',
+    id: '@nightCoder',
+    bio: 'SafeMoon - Auto-generating liquidity protocol / Static farming by holding!',
+    location: 'California',
+    website: 'perfect.com',
+    date: 'March 2021',
+    following: 45,
+    followers: '26K',
+}
+const samurai={
+    name: 'Samurai of China',
+    headerPhoto: '/img/samurai/header.jpg',
+    profile: '/img/samurai/profile.jpg',
+    id: '@samurai24',
+    bio: 'The official Samurai Shodown Twitter page from SNK. Follow us for up to date news and announcements.',
+    location: 'China',
+    website: 'samurai-shodown.com',
+    date: 'February 2019',
+    following: 27,
+    followers: '275K',
+}
+const ramos={
+    name: 'Sergio Ramos',
+    headerPhoto: '/img/ramos/header.jpg',
+    profile: '/img/ramos/profile.jpg',
+    id: '@ramos4',
+    bio: 'Jugador de fútbol y embajador de @unicef_es . Corazón, carácter y pasión. Football player and @unicef_es ambassador. Heart, character and passion.',
+    location: 'France',
+    website: 'instagram.com/sergioramos',
+    date: 'March 1985',
+    following: 742,
+    followers: '390K',
+}
+
 
 const RightSide = () => {
     return (
@@ -125,13 +162,13 @@ const RightSide = () => {
                     </div>
                     {/* people */}
                     <div className="flex flex-col">
-                        <Link to='profile'>
+                        <Link to={{pathname: '/profile/nightcoder', state: nightCoder}}>
                             <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
                                 {/* image and info */}
                                 <div className="flex items-center gap-2">
                                     {/* img */}
                                     <div className="w-16 h-16 overflow-hidden rounded-full">
-                                        <img src="./img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                        <img src="/img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
                                     </div>
                                     {/* id */}
                                     <div className="flex flex-col justify-center">
@@ -145,42 +182,46 @@ const RightSide = () => {
                                 </div>
                             </div>
                         </Link>
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/pro2.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                        <Link to={{pathname: '/profile/samurai', state: samurai}}>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="/img/pro2.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Samurai of China </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @samurai </span>
+                                    </div>
                                 </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Samurai of China </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @samurai </span>
-                                </div>
-                            </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/pro3.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
-                                </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Batman </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @batman </span>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
                                 </div>
                             </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
+                        </Link>
+                        <Link to={{pathname: '/profile/ramos', state: ramos}}>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="/img/ramos/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Batman </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @batman </span>
+                                    </div>
+                                </div>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     {/* see more */}
                     <a href="#" className="flex items-center px-4 py-2 transition duration-300 hover:bg-gray-100">
