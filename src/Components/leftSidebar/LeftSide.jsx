@@ -1,18 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const myProfile={
-    name: 'Mehran Mahmoudi',
-    headerPhoto: '/img/profileheader.jpg',
-    profile: '/img/profile.jpg',
-    id: '@Hiphoppa',
-    bio: 'Software engineer - FrontEnd developer - TailwindCSS Expert',
-    location: 'Alborz',
-    website: 'mehran.mj9999@gmail.com',
-    date: 'March 2020',
-    following: 25,
-    followers: '12',
-}
+const navItems = [
+    {
+        key: 0,
+        path: '/',
+        // exact: exact,
+        navItem: 'Home',
+        svg: <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>,
+        detail: {
+            name: 'Mehran Mahmoudi',
+            headerPhoto: '/img/profileheader.jpg',
+            profile: '/img/profile.jpg',
+            id: '@Hiphoppa',
+            bio: 'Software engineer - FrontEnd developer - TailwindCSS Expert',
+            location: 'Alborz',
+            website: 'mehran.mj9999@gmail.com',
+            date: 'March 2020',
+            following: 25,
+            followers: '12',
+        }
+    },
+    {
+        key: 1,
+        path: '/profile/Mehran',
+        // exact: exact,
+        navItem: 'profile',
+        svg: <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
+        detail: {
+            name: 'Mehran Mahmoudi',
+            headerPhoto: '/img/profileheader.jpg',
+            profile: '/img/profile.jpg',
+            id: '@Hiphoppa',
+            bio: 'Software engineer - FrontEnd developer - TailwindCSS Expert',
+            location: 'Alborz',
+            website: 'mehran.mj9999@gmail.com',
+            date: 'March 2020',
+            following: 25,
+            followers: '12',
+        }
+    },
+]
 
 const LeftSide = () => {
     return (
@@ -30,66 +58,18 @@ const LeftSide = () => {
                 </Link>
                 {/* lists */}
                 <nav className="flex flex-col gap-2 mb-6 text-xl font-bold list-none">
-                    <Link to='/'>
-                        <div className="group">
-                            <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                </svg>
-                                <span className=""> Home </span>
-                            </div>
-                        </div>
-                    </Link>
-                    <a href="#" className="group">
-                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
-                            </svg>
-                            <span className=""> Explore </span>
-                        </div>
-                    </a>
-                    <a href="/" className="group">
-                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                            </svg>
-                            <span className=""> Notification </span>
-                        </div>
-                    </a>
-                    <a href="/" className="group">
-                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                            <span className=""> Messages </span>
-                        </div>
-                    </a>
-                    <a href="/" className="group">
-                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                            </svg>
-                            <span className=""> Lists </span>
-                        </div>
-                    </a>
-                    <Link to={{pathname: '/profile/Hiphoppa', state: myProfile}}>
-                        <div className="group">
-                            <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                                <span className=""> Profile </span>
-                            </div>
-                        </div>
-                    </Link>
-                    <a href="/" className="group">
-                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span className=""> More </span>
-                        </div>
-                    </a>
+                    {navItems.map(nav => {
+                        return (
+                            <Link to={{ pathname: nav.path, state: nav.detail }}>
+                                <div className="group">
+                                    <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
+                                        {nav.svg}
+                                        <span className=""> {nav.navItem} </span>
+                                    </div>
+                                </div>
+                            </Link>
+                        )
+                    })}
                 </nav>
                 {/* tweet btn */}
                 <button className="flex items-center justify-center h-10 text-base font-bold text-white rounded-full shadow-md bg-primary-400 hover:bg-primary-450 w-60"> Tweet </button>
