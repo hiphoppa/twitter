@@ -14,7 +14,7 @@ const Hashtag = (props) => {
         <div className="grid grid-cols-10 p-4 border-b border-gray-100">
             {/* img */}
             <div className="col-span-1">
-                <div className="w-12 h-12 overflow-hidden rounded-full">
+                <div className="w-12 h-12 overflow-hidden transition duration-300 rounded-full cursor-pointer filter hover:brightness-90">
                     <img src={data.profile} alt="profile" className="w-full h-full" />
                 </div>
             </div>

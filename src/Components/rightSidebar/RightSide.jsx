@@ -99,12 +99,64 @@ const karim = [
         like: 85
     },
 ]
+const addle = [
+    {
+        index: 1,
+        name: 'hassan',
+        id: '@javaher',
+        profile: '/img/hashtags/addle/user1/profile.jpg',
+        desc: 'Dear Cardcy, so #addle a little update on improvements to the Cardano Foundations wallet structure.',
+        like: 455
+    },
+    {
+        index: 2,
+        name: 'Katy Perry',
+        id: '@katy',
+        profile: '/img/hashtags/addle/user2/profile.jpg',
+        desc: 'Today is the birthday of my dear #addle and partner ay is the birthday  ay is the birthday on this fabulous Halo journey!  Please wish the Master',
+        like: 85
+    },
+    {
+        index: 3,
+        name: 'Zandi',
+        id: '@zenon',
+        profile: '/img/hashtags/addle/user3/profile.jpg',
+        desc: 'Such a crazy honor to be part of such an #addle team and franchise. The real here part of such an #addle team and franchise. The real her oes are the folks that make things like this possible in the first place.',
+        like: 56
+    }
+]
+const mamad = [
+    {
+        index: 1,
+        name: 'hassan',
+        id: '@javaher',
+        profile: '/img/hashtags/mamad/user1/profile.jpg',
+        desc: 'Dear Cardcy, so #mamad a little updats to the Cardano Foundations wallet structure.',
+        like: 563
+    },
+    {
+        index: 2,
+        name: 'Katy Perry',
+        id: '@katy',
+        profile: '/img/hashtags/mamad/user2/profile.jpg',
+        desc: 'Today is the birthday of my dear #mamad and partner ay is the birthday  ay is the lo journey!  Please wish the Master',
+        like: 758
+    },
+    {
+        index: 3,
+        name: 'Zandi',
+        id: '@zenon',
+        profile: '/img/hashtags/mamad/user3/profile.jpg',
+        desc: 'Such a crazy honor to be part of such an #mamad team and franchise. The e. The real her oes are the folks that make things like this possible in the first place.',
+        like: 125
+    }
+]
 
 
 const RightSide = () => {
     return (
         <section className="col-span-3 pt-4">
-            <main className="flex flex-col pb-8">
+            <main className="sticky flex flex-col pb-8 top-4">
                 {/* search input */}
                 <div className="relative mb-4 text-gray-700 focus-within:text-blue-400 group">
                     <input type="text" className="w-full h-10 pl-10 rounded-full bg-gray-50" placeholder="ُSearch for tweet" />
@@ -158,62 +210,38 @@ const RightSide = () => {
                                 </div>
                             </div>
                         </Link>
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in USA </span>
-                                <span className="block text-base font-bold text-gray-700"> Addle </span>
-                                <span className="block text-xs font-normal text-gray-500"> 3005 Retweets </span>
+                        <Link to={{pathname: '/hashtag/addle', state: addle}}>
+                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
+                                {/* info */}
+                                <div className="flex flex-col pt-1.5">
+                                    <span className="block text-xs font-normal text-gray-500"> Trending in USA </span>
+                                    <span className="block text-base font-bold text-gray-700"> Addle </span>
+                                    <span className="block text-xs font-normal text-gray-500"> 3005 Retweets </span>
+                                </div>
+                                {/* more detail */}
+                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
+                        </Link>
+                        <Link to={{pathname: '/hashtag/mamad', state: mamad}}>
+                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
+                                {/* info */}
+                                <div className="flex flex-col pt-1.5">
+                                    <span className="block text-xs font-normal text-gray-500"> Trending in Iran </span>
+                                    <span className="block text-base font-bold text-gray-700"> Mamad </span>
+                                    <span className="block text-xs font-normal text-gray-500"> 2958 Retweets </span>
+                                </div>
+                                {/* more detail */}
+                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                        </a>
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in Iran </span>
-                                <span className="block text-base font-bold text-gray-700"> Mamad </span>
-                                <span className="block text-xs font-normal text-gray-500"> 2958 Retweets </span>
-                            </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in England </span>
-                                <span className="block text-base font-bold text-gray-700"> Cris </span>
-                                <span className="block text-xs font-normal text-gray-500"> 2858 Retweets </span>
-                            </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in Mexico </span>
-                                <span className="block text-base font-bold text-gray-700"> Vidal </span>
-                                <span className="block text-xs font-normal text-gray-500"> 2541 Retweets </span>
-                            </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
-                            </div>
-                        </a>
+                        </Link>
                     </div>
                     {/* show more */}
                     <a href="#" className="flex items-center px-4 py-2 transition duration-300 hover:bg-gray-100">
