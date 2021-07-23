@@ -1,9 +1,138 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import TextareaAutosize from 'react-textarea-autosize';
 import Header from './components/Header'
 import Tweets from './components/Tweets';
 
+
+
+const TweetList = [
+    {
+        index: 1,
+        name: 'LL Cool J',
+        img: './img/pro4.jpg',
+        id: '@Coolj',
+        like: 5,
+        post: "Dear Cardano Community, We take great #pride in driving transparency, so here's a little update on #improvements to the Cardano Foundation's wallet structure."
+    },
+    {
+        index: 2,
+        name: 'Jacki Chan',
+        img: './img/pro3.jpg',
+        id: '@jackie',
+        like: 85,
+        post: "Join an exclusive virtual event to learn #about the DevSecOps maturity model hosted by Datadog’s technology evangelist, Andrew Krug to assess your organization against the model. Register today."
+    },
+    {
+        index: 3,
+        name: 'Ferdoosipour',
+        img: './img/pro2.jpg',
+        id: '@Adel',
+        like: 26,
+        post: "Die Zeit wartet nicht auf Gamer. Mit Crucial gehören lange Ladezeiten endgültig der Vergangenheit an."
+    },
+    {
+        index: 4,
+        name: 'Dadash Sia',
+        img: './img/profile.jpg',
+        id: '@siasaketi',
+        like: 150,
+        post: "I want to spend all my time #learning React Js today"
+    },
+]
+
+
+
 const HomePage = () => {
+
+
+    //Namespace management idea from http://enterprisejquery.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
+(function( cursorManager ) {
+
+    //From: http://www.w3.org/TR/html-markup/syntax.html#syntax-elements
+    var voidNodeTags = ['AREA', 'BASE', 'BR', 'COL', 'EMBED', 'HR', 'IMG', 'INPUT', 'KEYGEN', 'LINK', 'MENUITEM', 'META', 'PARAM', 'SOURCE', 'TRACK', 'WBR', 'BASEFONT', 'BGSOUND', 'FRAME', 'ISINDEX'];
+
+    //From: https://stackoverflow.com/questions/237104/array-containsobj-in-javascript
+    Array.prototype.contains = function(obj) {
+        var i = this.length;
+        while (i--) {
+            if (this[i] === obj) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Basic idea from: https://stackoverflow.com/questions/19790442/test-if-an-element-can-contain-text
+    function canContainText(node) {
+        if(node.nodeType == 1) { //is an element node
+            return !voidNodeTags.contains(node.nodeName);
+        } else { //is not an element node
+            return false;
+        }
+    };
+
+    function getLastChildElement(el){
+        var lc = el.lastChild;
+        while(lc && lc.nodeType != 1) {
+            if(lc.previousSibling)
+                lc = lc.previousSibling;
+            else
+                break;
+        }
+        return lc;
+    }
+
+    //Based on Nico Burns's answer
+    cursorManager.setEndOfContenteditable = function(contentEditableElement)
+    {
+
+        while(getLastChildElement(contentEditableElement) &&
+              canContainText(getLastChildElement(contentEditableElement))) {
+            contentEditableElement = getLastChildElement(contentEditableElement);
+        }
+
+        var range,selection;
+        if(document.createRange)//Firefox, Chrome, Opera, Safari, IE 9+
+        {    
+            range = document.createRange();//Create a range (a range is a like the selection but invisible)
+            range.selectNodeContents(contentEditableElement);//Select the entire contents of the element with the range
+            range.collapse(false);//collapse the range to the end point. false means collapse to end rather than the start
+            selection = window.getSelection();//get the selection object (allows you to change selection)
+            selection.removeAllRanges();//remove any selections already made
+            selection.addRange(range);//make the range you have just created the visible selection
+        }
+        else if(document.selection)//IE 8 and lower
+        { 
+            range = document.body.createTextRange();//Create a range (a range is a like the selection but invisible)
+            range.moveToElementText(contentEditableElement);//Select the entire contents of the element with the range
+            range.collapse(false);//collapse the range to the end point. false means collapse to end rather than the start
+            range.select();//Select the range (make it the visible selection
+        }
+    }
+
+}( window.cursorManager = window.cursorManager || {}));
+
+    const [tweet, setTweet] = useState()
+    const inptContent = useRef();
+
+
+    const handleHashtags = (text) => {
+        return {__html: text.replace(/#\S+/g, '<span style="color: rgb(21, 142, 242)">$&</span>')}
+    }
+
+
+
+    const handle = () => {
+        inptContent.current.addEventListener('input', (e) => {
+            setTweet(handleHashtags(e.target.innerText))
+            window.cursorManager.setEndOfContenteditable(inptContent.current);
+        })
+
+    }
+    // useEffect(() => {
+
+    // })
 
     const icon = (<svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -19,7 +148,14 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-full gap-4 pt-2">
-                    <TextareaAutosize className="w-full text-xl font-medium text-gray-700 placeholder-gray-400 border-0 focus:border-0 focus:ring-0" placeholder="New Tweet..." />
+                    {/* <TextareaAutosize className="w-full text-xl font-medium text-gray-700 placeholder-gray-400 border-0 focus:border-0 focus:ring-0" placeholder="New Tweet..." /> */}
+                    <div
+                        className="w-full text-xl font-medium text-gray-700 editable focus:outline-none cursor-text"
+                        contentEditable
+                        data-placeholder="New Tweet..."
+                        ref={inptContent}
+                        onInput={handle}
+                        dangerouslySetInnerHTML={tweet}></div>
                     <div className="">
                         <div className="flex items-start gap-2 px-4 py-2 text-blue-400 transition duration-300 rounded-full cursor-pointer hover:bg-blue-50 w-max">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,9 +203,11 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-2.5 bg-gray-100 border-t border-b border-gray-200"></div>
+            <Link to='/profile'>
+                <div className="w-full h-2.5 bg-gray-100 border-t border-b border-gray-200"></div>
+            </Link>
             {/* tweets */}
-            <Tweets />
+            <Tweets tweetList={TweetList} />
 
         </section>
     );

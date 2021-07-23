@@ -1,17 +1,21 @@
 import React from 'react';
 
 
-const Tweet = ({data}) => {
+const Hashtag = (props) => {
+    console.log(props);
+    const {data} = props
+    console.log(data);
 
     const handleHashtags = (text) => {
         return {__html: text.replace(/#\S+/g, '<a href="/tags/$&" style="color: rgb(21, 142, 242)">$&</a>')}
+        // return text
     }
     return (
         <div className="grid grid-cols-10 p-4 border-b border-gray-100">
             {/* img */}
             <div className="col-span-1">
                 <div className="w-12 h-12 overflow-hidden rounded-full">
-                    <img src={data.img} alt="profile" className="w-full h-full" />
+                    <img src={data.profile} alt="profile" className="w-full h-full" />
                 </div>
             </div>
             {/* detail */}
@@ -26,7 +30,7 @@ const Tweet = ({data}) => {
                     </div>
                 </div>
                 {/* post text */}
-                <p dangerouslySetInnerHTML={handleHashtags(data.post)} className="block mb-8 text-base font-normal text-gray-700"></p>
+                <p dangerouslySetInnerHTML={handleHashtags(data.desc)} className="block mb-8 text-base font-normal text-gray-700"></p>
                 {/* post options */}
                 <div className="flex items-center justify-around">
                     {/* comment */}
@@ -58,8 +62,10 @@ const Tweet = ({data}) => {
                     </div>
                 </div>
             </div>
+        
         </div>
+    
     );
 }
 
-export default Tweet;
+export default Hashtag;

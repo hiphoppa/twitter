@@ -1,4 +1,104 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+const nightCoder={
+    name: 'night coder',
+    headerPhoto: '/img/night/night.jpg',
+    profile: '/img/night/profile.jpg',
+    id: '@nightCoder',
+    bio: 'SafeMoon - Auto-generating liquidity protocol / Static farming by holding!',
+    location: 'California',
+    website: 'perfect.com',
+    date: 'March 2021',
+    following: 45,
+    followers: '26K',
+}
+const samurai={
+    name: 'Samurai of China',
+    headerPhoto: '/img/samurai/header.jpg',
+    profile: '/img/samurai/profile.jpg',
+    id: '@samurai24',
+    bio: 'The official Samurai Shodown Twitter page from SNK. Follow us for up to date news and announcements.',
+    location: 'China',
+    website: 'samurai-shodown.com',
+    date: 'February 2019',
+    following: 27,
+    followers: '275K',
+}
+const ramos={
+    name: 'Sergio Ramos',
+    headerPhoto: '/img/ramos/header.jpg',
+    profile: '/img/ramos/profile.jpg',
+    id: '@ramos4',
+    bio: 'Jugador de fútbol y embajador de @unicef_es . Corazón, carácter y pasión. Football player and @unicef_es ambassador. Heart, character and passion.',
+    location: 'France',
+    website: 'instagram.com/sergioramos',
+    date: 'March 1985',
+    following: 742,
+    followers: '390K',
+}
+
+
+const carre = [
+    {
+        index: 1,
+        name: 'son hung min',
+        id: '@sonhungmin',
+        profile: '/img/hashtags/carre/user1/profile.jpg',
+        desc: 'Dear Cardano ng transparency, so #carre a little update on improvements to the Cardano Foundations wallet structure.',
+        like: 45
+    },
+    {
+        index: 2,
+        name: 'Jane Taylor',
+        id: '@officialjanetaylor',
+        profile: '/img/hashtags/carre/user2/profile.jpeg',
+        desc: 'Today is the birthday of my dear #carre and partner on this fabulous Halo journey!  Please wish the Master',
+        like: 890
+    },
+    {
+        index: 3,
+        name: 'Jeff Easterling',
+        id: '@Mr.Easterling',
+        profile: '/img/hashtags/carre/user3/profile.jpg',
+        desc: 'Such a crazy honor to be part of such an #carre team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+        like: 45
+    },
+]
+const karim = [
+    {
+        index: 1,
+        name: 'Javad Ezati',
+        id: '@javad',
+        profile: '/img/hashtags/karim/user1/profile.jpg',
+        desc: 'Dear Cardano ng transparency, so #karim a little update on improvements to the Cardano Foundations wallet structure.',
+        like: 45
+    },
+    {
+        index: 2,
+        name: 'Jackllin',
+        id: '@offitaylor',
+        profile: '/img/hashtags/karim/user2/profile.jpeg',
+        desc: 'Today is the birthday of my dear #karim and partner on this fabulous Halo journey!  Please wish the Master',
+        like: 890
+    },
+    {
+        index: 3,
+        name: 'Rahim',
+        id: '@Mr.rahim',
+        profile: '/img/hashtags/karim/user3/profile.jpg',
+        desc: 'Such a crazy honor to be part of such an #karim team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+        like: 45
+    },
+    {
+        index: 4,
+        name: 'Olas',
+        id: '@Mrs.olas',
+        profile: '/img/hashtags/karim/user4/profile.jpg',
+        desc: 'Such a crazy honor to be part of such an #karim team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+        like: 85
+    },
+]
 
 
 const RightSide = () => {
@@ -26,34 +126,38 @@ const RightSide = () => {
                     </div>
                     {/* trends */}
                     <div className="flex flex-col">
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in Germany </span>
-                                <span className="block text-base font-bold text-gray-700"> Carre </span>
-                                <span className="block text-xs font-normal text-gray-500"> 3058 Retweets </span>
+                        <Link to={{pathname: '/hashtag/carre', state: carre}}>
+                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
+                                {/* info */}
+                                <div className="flex flex-col pt-1.5">
+                                    <span className="block text-xs font-normal text-gray-500"> Trending in Germany </span>
+                                    <span className="block text-base font-bold text-gray-700"> Carre </span>
+                                    <span className="block text-xs font-normal text-gray-500"> 3058 Retweets </span>
+                                </div>
+                                {/* more detail */}
+                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
+                        </Link>
+                        <Link to={{pathname: '/hashtag/karim', state: karim}}>
+                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
+                                {/* info */}
+                                <div className="flex flex-col pt-1.5">
+                                    <span className="block text-xs font-normal text-gray-500"> Trending in France </span>
+                                    <span className="block text-base font-bold text-gray-700"> Karim </span>
+                                    <span className="block text-xs font-normal text-gray-500"> 3018 Retweets </span>
+                                </div>
+                                {/* more detail */}
+                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </div>
                             </div>
-                        </a>
-                        <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                            {/* info */}
-                            <div className="flex flex-col pt-1.5">
-                                <span className="block text-xs font-normal text-gray-500"> Trending in France </span>
-                                <span className="block text-base font-bold text-gray-700"> Karim </span>
-                                <span className="block text-xs font-normal text-gray-500"> 3018 Retweets </span>
-                            </div>
-                            {/* more detail */}
-                            <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
-                            </div>
-                        </a>
+                        </Link>
                         <a href="#" className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
                             {/* info */}
                             <div className="flex flex-col pt-1.5">
@@ -124,60 +228,66 @@ const RightSide = () => {
                     </div>
                     {/* people */}
                     <div className="flex flex-col">
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                        <Link to={{pathname: '/profile/nightcoder', state: nightCoder}}>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="/img/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Coder of the night </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @nightCoder </span>
+                                    </div>
                                 </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Coder of the night </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @nightCoder </span>
-                                </div>
-                            </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/pro2.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
-                                </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Samurai of China </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @samurai </span>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
                                 </div>
                             </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
-                            {/* image and info */}
-                            <div className="flex items-center gap-2">
-                                {/* img */}
-                                <div className="w-16 h-16 overflow-hidden rounded-full">
-                                    <img src="./img/pro3.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                        </Link>
+                        <Link to={{pathname: '/profile/samurai', state: samurai}}>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="/img/pro2.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Samurai of China </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @samurai </span>
+                                    </div>
                                 </div>
-                                {/* id */}
-                                <div className="flex flex-col justify-center">
-                                    <span className="block text-base font-bold text-gray-900"> Batman </span>
-                                    <span className="block text-sm font-normal text-gray-600"> @batman </span>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
                                 </div>
                             </div>
-                            {/* follow btn */}
-                            <div className="pt-2">
-                                <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
+                        </Link>
+                        <Link to={{pathname: '/profile/ramos', state: ramos}}>
+                            <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
+                                {/* image and info */}
+                                <div className="flex items-center gap-2">
+                                    {/* img */}
+                                    <div className="w-16 h-16 overflow-hidden rounded-full">
+                                        <img src="/img/ramos/profile.jpg" alt="profile" className="w-full h-full transition duration-300 filter group-hover:blur-xs" />
+                                    </div>
+                                    {/* id */}
+                                    <div className="flex flex-col justify-center">
+                                        <span className="block text-base font-bold text-gray-900"> Batman </span>
+                                        <span className="block text-sm font-normal text-gray-600"> @batman </span>
+                                    </div>
+                                </div>
+                                {/* follow btn */}
+                                <div className="pt-2">
+                                    <div className="flex px-2 py-1 text-sm font-bold text-blue-400 border border-blue-400 rounded-full"> follow </div>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     {/* see more */}
                     <a href="#" className="flex items-center px-4 py-2 transition duration-300 hover:bg-gray-100">
