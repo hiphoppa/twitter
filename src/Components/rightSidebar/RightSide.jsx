@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const nightCoder={
+const nightCoder = {
     name: 'night coder',
     headerPhoto: '/img/night/night.jpg',
     profile: '/img/night/profile.jpg',
@@ -13,7 +13,7 @@ const nightCoder={
     following: 45,
     followers: '26K',
 }
-const samurai={
+const samurai = {
     name: 'Samurai of China',
     headerPhoto: '/img/samurai/header.jpg',
     profile: '/img/samurai/profile.jpg',
@@ -25,7 +25,7 @@ const samurai={
     following: 27,
     followers: '275K',
 }
-const ramos={
+const ramos = {
     name: 'Sergio Ramos',
     headerPhoto: '/img/ramos/header.jpg',
     profile: '/img/ramos/profile.jpg',
@@ -152,8 +152,167 @@ const mamad = [
     }
 ]
 
+const data = [
+    {
+        key: 0,
+        detail: {
+            country: 'Germany',
+            hashtag: 'carre',
+            retweet: 2856,
+            path: '/hashtag/carre',
+            info: {
+                hashtags: [
+                    {
+                        index: 1,
+                        name: 'son hung min',
+                        id: '@sonhungmin',
+                        profile: '/img/hashtags/carre/user1/profile.jpg',
+                        desc: 'Dear Cardano ng transparency, so #carre a little update on improvements to the Cardano Foundations wallet structure.',
+                        like: 45
+                    },
+                    {
+                        index: 2,
+                        name: 'Jane Taylor',
+                        id: '@officialjanetaylor',
+                        profile: '/img/hashtags/carre/user2/profile.jpeg',
+                        desc: 'Today is the birthday of my dear #carre and partner on this fabulous Halo journey!  Please wish the Master',
+                        like: 890
+                    },
+                    {
+                        index: 3,
+                        name: 'Jeff Easterling',
+                        id: '@Mr.Easterling',
+                        profile: '/img/hashtags/carre/user3/profile.jpg',
+                        desc: 'Such a crazy honor to be part of such an #carre team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+                        like: 45
+                    },
+                ]
+            },
+        }
+    },
+    {
+        key: 1,
+        detail: {
+            country: 'France',
+            hashtag: 'karim',
+            retweet: 2458,
+            path: '/hashtag/karim',
+            info: {
+                hashtags: [
+                    {
+                        index: 1,
+                        name: 'Javad Ezati',
+                        id: '@javad',
+                        profile: '/img/hashtags/karim/user1/profile.jpg',
+                        desc: 'Dear Cardano ng transparency, so #karim a little update on improvements to the Cardano Foundations wallet structure.',
+                        like: 45
+                    },
+                    {
+                        index: 2,
+                        name: 'Jackllin',
+                        id: '@offitaylor',
+                        profile: '/img/hashtags/karim/user2/profile.jpeg',
+                        desc: 'Today is the birthday of my dear #karim and partner on this fabulous Halo journey!  Please wish the Master',
+                        like: 890
+                    },
+                    {
+                        index: 3,
+                        name: 'Rahim',
+                        id: '@Mr.rahim',
+                        profile: '/img/hashtags/karim/user3/profile.jpg',
+                        desc: 'Such a crazy honor to be part of such an #karim team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+                        like: 45
+                    },
+                    {
+                        index: 4,
+                        name: 'Olas',
+                        id: '@Mrs.olas',
+                        profile: '/img/hashtags/karim/user4/profile.jpg',
+                        desc: 'Such a crazy honor to be part of such an #karim team and franchise. The real heroes are the folks that make things like this possible in the first place.',
+                        like: 85
+                    },
+                ]
+            }
+        }
+    },
+    {
+        key: 2,
+        detail: {
+            country: 'England',
+            hashtag: 'addle',
+            retweet: 2398,
+            path: '/hashtag/addle',
+            info: {
+                hashtags: [
+                    {
+                        index: 1,
+                        name: 'hassan',
+                        id: '@javaher',
+                        profile: '/img/hashtags/addle/user1/profile.jpg',
+                        desc: 'Dear Cardcy, so #addle a little update on improvements to the Cardano Foundations wallet structure.',
+                        like: 455
+                    },
+                    {
+                        index: 2,
+                        name: 'Katy Perry',
+                        id: '@katy',
+                        profile: '/img/hashtags/addle/user2/profile.jpg',
+                        desc: 'Today is the birthday of my dear #addle and partner ay is the birthday  ay is the birthday on this fabulous Halo journey!  Please wish the Master',
+                        like: 85
+                    },
+                    {
+                        index: 3,
+                        name: 'Zandi',
+                        id: '@zenon',
+                        profile: '/img/hashtags/addle/user3/profile.jpg',
+                        desc: 'Such a crazy honor to be part of such an #addle team and franchise. The real here part of such an #addle team and franchise. The real her oes are the folks that make things like this possible in the first place.',
+                        like: 56
+                    }
+                ]
+            }
+        }
+    },
+    {
+        key: 3,
+        detail: {
+            country: 'Iran',
+            hashtag: 'mamad',
+            retweet: 2002,
+            path: '/hashtag/mamad',
+            info: {
+                hashtags: [
+                    {
+                        index: 1,
+                        name: 'hassan',
+                        id: '@javaher',
+                        profile: '/img/hashtags/mamad/user1/profile.jpg',
+                        desc: 'Dear Cardcy, so #mamad a little updats to the Cardano Foundations wallet structure.',
+                        like: 563
+                    },
+                    {
+                        index: 2,
+                        name: 'Katy Perry',
+                        id: '@katy',
+                        profile: '/img/hashtags/mamad/user2/profile.jpg',
+                        desc: 'Today is the birthday of my dear #mamad and partner ay is the birthday  ay is the lo journey!  Please wish the Master',
+                        like: 758
+                    },
+                    {
+                        index: 3,
+                        name: 'Zandi',
+                        id: '@zenon',
+                        profile: '/img/hashtags/mamad/user3/profile.jpg',
+                        desc: 'Such a crazy honor to be part of such an #mamad team and franchise. The e. The real her oes are the folks that make things like this possible in the first place.',
+                        like: 125
+                    }
+                ]
+            }
+        }
+    }
+]
 
 const RightSide = () => {
+    // console.log(data);
     return (
         <section className="col-span-3 pt-4">
             <main className="sticky flex flex-col pb-8 top-4">
@@ -178,70 +337,27 @@ const RightSide = () => {
                     </div>
                     {/* trends */}
                     <div className="flex flex-col">
-                        <Link to={{pathname: '/hashtag/carre', state: carre}}>
-                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                                {/* info */}
-                                <div className="flex flex-col pt-1.5">
-                                    <span className="block text-xs font-normal text-gray-500"> Trending in Germany </span>
-                                    <span className="block text-base font-bold text-gray-700"> Carre </span>
-                                    <span className="block text-xs font-normal text-gray-500"> 3058 Retweets </span>
-                                </div>
-                                {/* more detail */}
-                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={{pathname: '/hashtag/karim', state: karim}}>
-                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                                {/* info */}
-                                <div className="flex flex-col pt-1.5">
-                                    <span className="block text-xs font-normal text-gray-500"> Trending in France </span>
-                                    <span className="block text-base font-bold text-gray-700"> Karim </span>
-                                    <span className="block text-xs font-normal text-gray-500"> 3018 Retweets </span>
-                                </div>
-                                {/* more detail */}
-                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={{pathname: '/hashtag/addle', state: addle}}>
-                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                                {/* info */}
-                                <div className="flex flex-col pt-1.5">
-                                    <span className="block text-xs font-normal text-gray-500"> Trending in USA </span>
-                                    <span className="block text-base font-bold text-gray-700"> Addle </span>
-                                    <span className="block text-xs font-normal text-gray-500"> 3005 Retweets </span>
-                                </div>
-                                {/* more detail */}
-                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={{pathname: '/hashtag/mamad', state: mamad}}>
-                            <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
-                                {/* info */}
-                                <div className="flex flex-col pt-1.5">
-                                    <span className="block text-xs font-normal text-gray-500"> Trending in Iran </span>
-                                    <span className="block text-base font-bold text-gray-700"> Mamad </span>
-                                    <span className="block text-xs font-normal text-gray-500"> 2958 Retweets </span>
-                                </div>
-                                {/* more detail */}
-                                <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </Link>
+                        
+                        {data.map(item => {
+                            return (
+                                <Link key={item.key} to={{ pathname: item.detail.path, state: item.detail.info.hashtags }}>
+                                    <div className="flex items-start justify-between px-4 py-2 transition duration-300 border-b border-gray-100 hover:bg-gray-100">
+                                        {/* info */}
+                                        <div className="flex flex-col pt-1.5">
+                                            <span className="block text-xs font-normal text-gray-500"> Trending in {item.detail.country} </span>
+                                            <span className="block text-base font-bold text-gray-700"> {item.detail.hashtag} </span>
+                                            <span className="block text-xs font-normal text-gray-500"> {item.detail.retweet} Retweets </span>
+                                        </div>
+                                        {/* more detail */}
+                                        <div className="text-gray-700 p-1.5 hover:bg-blue-100 rounded-full cursor-pointer transition duration-300 focus-within:text-blue-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </Link>
+                            )
+                        })}
                     </div>
                     {/* show more */}
                     <a href="#" className="flex items-center px-4 py-2 transition duration-300 hover:bg-gray-100">
@@ -256,7 +372,7 @@ const RightSide = () => {
                     </div>
                     {/* people */}
                     <div className="flex flex-col">
-                        <Link to={{pathname: '/profile/nightcoder', state: nightCoder}}>
+                        <Link to={{ pathname: '/profile/nightcoder', state: nightCoder }}>
                             <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
                                 {/* image and info */}
                                 <div className="flex items-center gap-2">
@@ -276,7 +392,7 @@ const RightSide = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to={{pathname: '/profile/samurai', state: samurai}}>
+                        <Link to={{ pathname: '/profile/samurai', state: samurai }}>
                             <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
                                 {/* image and info */}
                                 <div className="flex items-center gap-2">
@@ -296,7 +412,7 @@ const RightSide = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to={{pathname: '/profile/ramos', state: ramos}}>
+                        <Link to={{ pathname: '/profile/ramos', state: ramos }}>
                             <div className="flex flex-row justify-between px-4 py-2 transition duration-300 border-b border-gray-100 cursor-pointer hover:bg-gray-100 group">
                                 {/* image and info */}
                                 <div className="flex items-center gap-2">
