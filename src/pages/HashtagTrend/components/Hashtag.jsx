@@ -2,9 +2,9 @@ import React from 'react';
 
 
 const Hashtag = (props) => {
-    console.log(props);
+    // console.log(props);
     const {data} = props
-    console.log(data);
+    // console.log(data);
 
     const handleHashtags = (text) => {
         return {__html: text.replace(/#\S+/g, '<a href="/tags/$&" style="color: rgb(21, 142, 242)">$&</a>')}
