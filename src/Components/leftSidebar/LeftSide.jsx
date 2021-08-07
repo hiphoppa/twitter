@@ -9,6 +9,7 @@ const LeftSide = () => {
             key: 0,
             path: '/',
             // exact: exact,
+            icon: 'fa fa-home',
             navItem: 'Home',
             svg: <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>,
             detail: {
@@ -28,6 +29,7 @@ const LeftSide = () => {
             key: 1,
             path: '/profile/Mehran',
             // exact: exact,
+            icon: 'fa fa-user',
             navItem: 'profile',
             svg: <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
             detail: {
@@ -46,6 +48,10 @@ const LeftSide = () => {
     ]
     const [nav, setNav] = useState(navItems)
 
+    const handleRemoveToken = () => {
+        localStorage.removeItem('token')
+        window.location.reload()
+    }
 
     return (
         <section className="flex flex-col col-span-3 pt-4">
@@ -74,6 +80,12 @@ const LeftSide = () => {
                             </Link>
                         )
                     })}
+                    <div className="cursor-pointer group" onClick={handleRemoveToken}>
+                        <div className="flex flex-row items-center gap-4 py-3 pl-3 pr-6 text-gray-900 transition duration-300 rounded-full group-hover:text-blue-400 group-hover:bg-blue-50 w-max">
+                            <i className="fa fa-sign-out-alt"></i>
+                            <span className=""> Sign out </span>
+                        </div>
+                    </div>
                 </nav>
                 {/* tweet btn */}
                 <button className="flex items-center justify-center h-10 text-base font-bold text-white rounded-full shadow-md bg-primary-400 hover:bg-primary-450 w-60"> Tweet </button>

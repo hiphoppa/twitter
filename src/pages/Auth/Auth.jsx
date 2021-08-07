@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -56,13 +57,16 @@ const Auth = () => {
                 if (res.status == 200) {
                     toast.success('ثبت نام شما با موفقیت انجام شد.', {
                         position: "top-left",
-                        autoClose: 5000,
+                        autoClose: 2000,
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
                     })
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
                 }
             }).catch(err => {
                 toast.warning(err.response.data.message, {
@@ -76,6 +80,38 @@ const Auth = () => {
                 })
             })
         }
+    }
+
+    const handleLogin = () => {
+        const data = {
+            username: loginUsername,
+            password: loginPassword
+        }
+        console.log(JSON.stringify(data));
+        axios.post('https://twitterapi.liara.run/api/login', JSON.stringify(data), {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
+        .then(res => {
+            console.log(res);
+            localStorage.setItem('token', res.data['x-auth-token'])
+            if(res.status == 200){
+                toast.success(`${res.data['username']} عزیز ورود شما بدون درد انجام شد.`,{
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+            })
+            setTimeout(() => {
+                window.location.reload()
+            }, 2000);
+        }
+        }).catch(err => {
+            console.log(err);
+        })
     }
 
     return (
@@ -110,7 +146,7 @@ const Auth = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                     </div>
-                    <button className="flex items-center justify-center w-full h-12 text-lg font-normal text-white rounded-full bg-violet-700"> Submit </button>
+                    <button className="flex items-center justify-center w-full h-12 text-lg font-normal text-white rounded-full bg-violet-700" onClick={handleLogin}> Submit </button>
                 </div>
                 {/* register */}
                 <div className={`${page === 2 ? `block` : `hidden`}`}>
