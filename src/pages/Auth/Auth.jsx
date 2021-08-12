@@ -54,6 +54,8 @@ const Auth = () => {
             }).then(res => {
                 console.log(res);
                 localStorage.setItem('token', res.data["x-auth-token"])
+                localStorage.setItem('name', res.data["name"])
+                localStorage.setItem('username', res.data["username"])
                 if (res.status == 200) {
                     toast.success('ثبت نام شما با موفقیت انجام شد.', {
                         position: "top-left",
@@ -116,7 +118,7 @@ const Auth = () => {
 
     return (
         <div className="relative flex items-center justify-center w-full h-screen bg-gradient-to-r from-red-500 to-indigo-600">
-            <div className="relative flex flex-col w-full max-w-xl p-8 bg-white border border-gray-200 rounded-2xl bg-opacity-20" x-data="{page: 1}">
+            <div className="relative flex flex-col w-full max-w-xl p-8 bg-white border border-gray-200 rounded-2xl bg-opacity-20">
                 <ul className="flex flex-row items-center mb-8 list-none">
                     <li className={`flex items-center justify-center h-10 cursor-pointer w-28 ${page === 1 ? `border-b-2 border-violet-700` : ``}`} onClick={gotoLogin}>
                         Login
