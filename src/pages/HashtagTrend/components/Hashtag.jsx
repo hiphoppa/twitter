@@ -2,9 +2,9 @@ import React from 'react';
 
 
 const Hashtag = (props) => {
-    console.log(props);
+    // console.log(props);
     const {data} = props
-    console.log(data);
+    // console.log(data);
 
     const handleHashtags = (text) => {
         return {__html: text.replace(/#\S+/g, '<a href="/tags/$&" style="color: rgb(21, 142, 242)">$&</a>')}
@@ -14,7 +14,7 @@ const Hashtag = (props) => {
         <div className="grid grid-cols-10 p-4 border-b border-gray-100">
             {/* img */}
             <div className="col-span-1">
-                <div className="w-12 h-12 overflow-hidden rounded-full">
+                <div className="w-12 h-12 overflow-hidden transition duration-300 rounded-full cursor-pointer filter hover:brightness-90">
                     <img src={data.profile} alt="profile" className="w-full h-full" />
                 </div>
             </div>

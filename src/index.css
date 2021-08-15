@@ -29,8 +29,9 @@
     }
 
 }
+
 /* input */
-input[type=text]{
+input[type=text], input[type=password]{
   @apply text-base font-normal placeholder-gray-400 transition duration-300 border border-gray-300 font-iran hover:border-gray-400 focus:border-gray-300 focus:shadow-md focus:outline-none focus:ring-0 focus:ring-offset-0;
 }
 
@@ -50,4 +51,9 @@ body{
   .editable:empty::before{
     content: attr(data-placeholder);
     @apply text-gray-400;
+  }
+
+  .Toastify__toast{
+    @apply font-iran !important;
+    direction: rtl !important;
   }

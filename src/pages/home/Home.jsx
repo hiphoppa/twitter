@@ -1,3 +1,4 @@
+import axios, * as others from 'axios';
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TextareaAutosize from 'react-textarea-autosize';
@@ -43,7 +44,21 @@ const TweetList = [
 
 
 
+
 const HomePage = () => {
+
+    // useEffect(() => {
+
+        // axios.get("http://localhost:3000/tweets").then(response => {
+        //     console.log(response);
+        //     return
+        // }).catch(err => {
+        //     console.log(err);
+        //     return
+        // }).finally(() => {
+        //     console.log("hello");
+        // })
+    // })
 
 
     //Namespace management idea from http://enterprisejquery.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/

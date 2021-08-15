@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
@@ -18,11 +20,17 @@ module.exports = {
       blur: {
         xs: '1px',
       },
+
+      boxShadow: {
+        glass: 'inset 0 2px 22px 0 rgba(255, 255, 255, 0.6);',
+      },
+
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         spin: 'spin 2s linear infinite',
       },
       colors: {
+        'violet': colors.violet,
         primary: {
           400: '#1DA1F2',
           450: '#1E96FA',
