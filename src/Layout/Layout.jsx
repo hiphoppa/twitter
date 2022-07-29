@@ -43,7 +43,7 @@ console.log(isLogin());
 const PublicRoute = ({component, ...props}) => {
     return <Route {...props} render={(props) => {
         if(isLogin()){
-                return <Redirect to={'/'} />
+            return <Redirect to={'/'} />
         } else {
             return React.createElement(component, props)
         }
